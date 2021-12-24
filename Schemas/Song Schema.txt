@@ -1,0 +1,14 @@
+Song Schema
+{
+	"Name": "",
+	"Date": {Date Object},
+	"Year": #,
+	"Length": "",
+	"Releases": [
+		{Album Object},...
+	],
+	"First Played": {Date Object},
+	"Singer(s)": "",
+	"Lyrics": "",
+	"Credits": {Credits Object}
+}

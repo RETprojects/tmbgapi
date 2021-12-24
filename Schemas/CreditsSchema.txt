@@ -1,0 +1,15 @@
+Credits Schema
+{
+	"Credits": {
+		key:value,...
+	}
+	"Vocals": {
+		key:value,...
+	}
+	"Instruments": {
+		key:value,...
+	}
+	"Production": {
+		key:value,...
+	}
+}

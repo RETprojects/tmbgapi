@@ -1,0 +1,14 @@
+Album Schema
+{
+	"Name": "",
+	"Type": "",
+	"Date": {Date Object},
+	"Year": #,
+	"Length": "",
+	"Label": "",
+	"Number of Tracks": #,
+	"Cover": {Image File},
+	"Tracklist": [
+		{Song Object},...
+	]
+}
