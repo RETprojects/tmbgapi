@@ -17,21 +17,21 @@ Here are the schemas that are used or may be used for this API.
 
 ```
 {
-  "Date": 0000,
-  "Venue": "", 
-  "City": "",
-  "Attendance": {
-    "Number": 0,
-    "Names": [
-      "user1", "user2"
-    ]
-  },
-  "Setlist": {
-    "Set 1": [
-      "song1", "song2"
-    ]
-  },
-  "Link": ""
+	"Date": 0000,
+	"Venue": "", 
+	"City": "",
+	"Attendance": {
+  		"Number": 0,
+  		"Names": [
+    		"user1", "user2"
+    	]
+  	},
+  	"Setlist": {
+    	"Set 1": [
+      		"song1", "song2"
+    	]
+  	},
+  	"Link": ""
 }
 ```
 
