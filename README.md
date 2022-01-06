@@ -25,21 +25,13 @@ Here are the schemas that are used or may be used for this API.
     "Names": [
       "user1", "user2"
     ]
-    
   },
-  
   "Setlist": {
-  
     "Set 1": [
-    
       "song1", "song2"
-      
     ]
-    
   },
-  
   "Link": ""
-  
 }
 ```
 
