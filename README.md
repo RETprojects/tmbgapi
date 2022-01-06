@@ -47,29 +47,17 @@ Here are the schemas that are used or may be used for this API.
 
 ```
 {
-
 	"Name": "",
-  
 	"Type": "",
-  
 	"Date": {Date Object},
-  
 	"Year": #,
-  
 	"Length": "",
-  
 	"Label": "",
-  
 	"Number of Tracks": #,
-  
 	"Cover": {Image File},
-  
 	"Tracklist": [
-  
 		{Song Object},...
-    
 	]
-  
 }
 ```
 
@@ -77,31 +65,18 @@ Here are the schemas that are used or may be used for this API.
 
 ```
 {
-
 	"Credits": {
-  
 		key:value,...
-    
 	}
-  
 	"Vocals": {
-  
 		key:value,...
-    
 	}
-  
 	"Instruments": {
-  
 		key:value,...
-    
 	}
-  
 	"Production": {
-  
 		key:value,...
-    
 	}
-  
 }
 ```
 
@@ -109,13 +84,9 @@ Here are the schemas that are used or may be used for this API.
 
 ```
 {
-
 	"Month": "" or #,
-  
 	"Day": #,
-  
 	"Year": #
-  
 }
 ```
 
@@ -123,29 +94,17 @@ Here are the schemas that are used or may be used for this API.
 
 ```
 {
-
 	"Name": "",
-  
 	"Date": {Date Object},
-  
 	"Year": #,
-  
 	"Length": "",
-  
 	"Releases": [
-  
 		{Album Object},...
-    
 	],
-  
 	"First Played": {Date Object},
-  
 	"Singer(s)": "",
-  
 	"Lyrics": "",
-  
 	"Credits": {Credits Object}
-  
 }
 ```
 
