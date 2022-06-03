@@ -54,7 +54,8 @@ year = final_table_data[0][0]
 for entry in final_table_data:
     name = entry[1]
 
-    details_link = "http://tmbw.net/wiki/" + str(name)
+    #details_link = "http://tmbw.net/wiki/" + str(name)
+    details_link = "http://tmbw.net" + str(table.find_all("tr").find_all("td")[1].find('a')['href'])
     d_data = requests.get(details_link)  # get page data
     d_soup = BeautifulSoup(d_data.text,features="html.parser")  # parse page data
     d_table = d_soup.find('table') # get the first (and only) table on the page
