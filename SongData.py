@@ -3,7 +3,10 @@ from bs4 import BeautifulSoup
 
 # This function scrapes data from a specific song page on tmbw.net.
 def get_song_data(name):
-    details_link = "http://tmbw.net/wiki/" + str(name)
+    if name != "They Might Be Giants":
+        details_link = "http://tmbw.net/wiki/" + str(name).replace(" ","_")
+    else:
+        details_link = "http://tmbw.net/wiki/" + str(name).replace(" ","_") + "_(Song)"
     d_data = requests.get(details_link)  # get page data
     d_soup = BeautifulSoup(d_data.text,features="html.parser")  # parse page data
     d_table = d_soup.find('table') # get the first (and only) table on the page
