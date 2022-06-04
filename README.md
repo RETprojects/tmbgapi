@@ -13,7 +13,7 @@ There are several endpoints that are intended to be covered in the development o
 ## Schemas
 Here are the schemas that are used or may be used for this API.
 
-### Show Schema
+### Show Schema 🎤
 
 ```
 {
@@ -35,7 +35,7 @@ Here are the schemas that are used or may be used for this API.
 }
 ```
 
-### Album Schema
+### Album Schema 💿
 
 ```
 {
@@ -53,7 +53,7 @@ Here are the schemas that are used or may be used for this API.
 }
 ```
 
-### Credits Schema
+### Credits Schema 📄
 
 ```
 {
@@ -72,7 +72,7 @@ Here are the schemas that are used or may be used for this API.
 }
 ```
 
-### Date Schema
+### Date Schema 📆
 
 ```
 {
@@ -82,7 +82,7 @@ Here are the schemas that are used or may be used for this API.
 }
 ```
 
-### Song Schema
+### Song Schema 🎵
 
 ```
 {
