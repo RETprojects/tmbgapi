@@ -1,4 +1,4 @@
-# tmbgapi
+# tmbgapi :accordion::guitar:
 This is an API that scrapes data from [tmbw.net](http://tmbw.net/wiki/Main_Page), the official wiki for the iconic alternative rock group They Might Be Giants. So far, the API allows users to access data about every live TMBG show that has been recorded on the wiki.
 
 ## Endpoints
