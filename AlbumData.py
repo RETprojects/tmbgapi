@@ -27,6 +27,7 @@ def get_table_body_as_lists(table_obj):
         result.append(curr_row)
     return result
 
+#def scrape_album(title):
 url = 'http://tmbw.net/wiki/Discography'
 data = requests.get(url)  # get page data
 soup = BeautifulSoup(data.text,features="html.parser")  # parse page data
@@ -37,32 +38,19 @@ table_body = get_table_body_as_lists(table)
 final_table_data = [table_head] + table_body # join the head data and body data
 final_table_data = final_table_data[2:]
 
-# Create an object to represent an album.
-#print(final_table_data[0])#.find("a")))
-#print(final_table_data[0][1].find("a"))
-#details_link = final_table_data[0][1].find("a").get('href')  # get the link
-details_link = "http://tmbw.net/wiki/" + str(final_table_data[0][1])
-#print(details_link)
-d_data = requests.get(details_link)  # get page data
-d_soup = BeautifulSoup(d_data.text,features="html.parser")  # parse page data
-d_table = d_soup.find('table') # get the first (and only) table on the page
-name = final_table_data[0][1]
-typ = final_table_data[0][2]
-year = final_table_data[0][0]
-
 # Get all releases listed on the Discography page.
 for entry in final_table_data:
     name = entry[1]
 
     #details_link = "http://tmbw.net/wiki/" + str(name)
-    details_link = "http://tmbw.net" + str(table.find_all("tr").find_all("td")[1].find('a')['href'])
-    d_data = requests.get(details_link)  # get page data
-    d_soup = BeautifulSoup(d_data.text,features="html.parser")  # parse page data
-    d_table = d_soup.find('table') # get the first (and only) table on the page
-    d_table_head = get_table_head_fields_as_list(d_table)
-    d_table_body = get_table_body_as_lists(d_table)
-    d_final_table_data = [d_table_head] + d_table_body # join the head data and body data
-    d_final_table_data = d_final_table_data[2:]
+    # details_link = "http://tmbw.net" + str(table.find_all("tr").find_all("td")[1].find('a')['href'])
+    # d_data = requests.get(details_link)  # get page data
+    # d_soup = BeautifulSoup(d_data.text,features="html.parser")  # parse page data
+    # d_table = d_soup.find('table') # get the first (and only) table on the page
+    # d_table_head = get_table_head_fields_as_list(d_table)
+    # d_table_body = get_table_body_as_lists(d_table)
+    # d_final_table_data = [d_table_head] + d_table_body # join the head data and body data
+    # d_final_table_data = d_final_table_data[2:]
 
     typ = entry[2]
     #date = 
@@ -72,3 +60,17 @@ for entry in final_table_data:
     #cover = 
     #tracklist = 
 
+    print("{}, {} {}".format(name, year, typ))
+
+def Album(title):
+    '''Wrapper function the endpoint will call
+    Input: title
+    Output: data in format specified by schema
+    '''
+    # get initial album details, so pass it to the scrape_album function.
+    # search the table for that album title, then return some info about that album
+    album_details = ""
+    for album in final_table_data:
+        if album[1] == title:
+            album_details = album
+    return album_details

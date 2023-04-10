@@ -1,5 +1,6 @@
 import flask    # do `pip3 install flask` if it gives you trouble
 from ShowsData import Shows
+from AlbumData import Album
 
 app = flask.Flask(__name__)     # define the flask app like this
 app.config["DEBUG"] = True      # debug will print useful stuff out
@@ -7,6 +8,10 @@ app.config["DEBUG"] = True      # debug will print useful stuff out
 @app.route('/Shows/<year>', methods=['GET']) # this is called a decorator. it has info on the name of the endpoint and supported http method.
 def ShowsWrapper(year):                         # this will be your wrapper function. each path var (thing in square brackets) is an input to this.
     return str(Shows(year))
+
+@app.route('/Album/<title>', methods=['GET']) # this is called a decorator. it has info on the name of the endpoint and supported http method.
+def AlbumWrapper(title):                         # this will be your wrapper function. each path var (thing in square brackets) is an input to this.
+    return str(Album(title))
 
 app.run()   # actually starts the flask server
 

@@ -32,4 +32,7 @@ table_head = get_table_head_fields_as_list(table)
 table_body = get_table_body_as_lists(table)
 final_table_data = [table_head] + table_body # join the head data and body data
 final_table_data = final_table_data[2:]
-print(final_table_data[0][1])
+#print(final_table_data[0][1])
+# display all releases
+for album in final_table_data:
+    print("{}, {} {}".format(album[1], album[0], album[2]))
